@@ -1,11 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 import {PlayerCard, PlayerList} from './components/player-list.component';
+import './App.css';
 
 class  App extends React.Component {
 
   //creating a class component and setting initial state to empty object of the players that we receive from our API
-  constructor(props){
+  constructor(){
     super();
     this.state= {
       players: []
