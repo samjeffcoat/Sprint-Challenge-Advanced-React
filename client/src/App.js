@@ -26,7 +26,7 @@ class  App extends React.Component {
   render(){
   return (
     <div className="App">
-      <PlayerCard playerData= {this.state.players}/>
+      <PlayerList players= {this.state.players}/>
     </div>
   );
 }
