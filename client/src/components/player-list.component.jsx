@@ -1,5 +1,6 @@
 import React from 'react';
 import { PlayerCard }from './player-card.component';
+import './player-list.styles.css';
 
 export const PlayerList = props => {
     return (
