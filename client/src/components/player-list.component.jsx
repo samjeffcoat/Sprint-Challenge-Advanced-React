@@ -2,7 +2,9 @@ import React from 'react';
 import { PlayerCard }from './player-card.component';
 
 export const PlayerList = props => {
-    return <div className= "plater-list">
-        {props.players.map(player=> <PlayerCard key= {player.id} player= {player}/>)}
-    </div>
+    return (
+    <div className= "player-list">
+        {props.playerData.map(player=> 
+        <PlayerCard key= {player.id} player= {player.name}/>)}
+    </div>)
 }
