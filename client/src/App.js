@@ -6,6 +6,9 @@ import './App.css';
 class  App extends React.Component {
 
   //creating a class component and setting initial state to empty object of the players that we receive from our API
+  
+
+
   constructor(){
     super();
     this.state= {
