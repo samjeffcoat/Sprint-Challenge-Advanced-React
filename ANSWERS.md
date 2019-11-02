@@ -10,9 +10,12 @@ Class Components will hold our state and inialize our data. Class components als
 
 
 
-- [ ] Name three lifecycle methods and their purposes.
+- [ ] Name three lifecycle methods and their purposes.///add more- unmount
 render()= it handles the rendering of our component to the UI
 componentDidMount()- We will use this to make our API calls and can set state after the call
+
+componentwillUnMount()-is called when we need any cleanup to do
+
 
 componentDidUpdate() - this method is invoked as soon as updating happens. The most common use case is updating the DOM in response to prop or state changes. 
 

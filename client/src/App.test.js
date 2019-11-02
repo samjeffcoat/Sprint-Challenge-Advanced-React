@@ -17,6 +17,11 @@ test('toggle button loads dark mode', () => {
     getByTestId("toggle-element")
 });
 
+test('Gets homepage title', () => {
+  const { getByText }= render(<App/>);
+  getByText(/Women's World Cup/i);
+})
+
 // it('loads dark mode button', () => {
 //   const app = rtl.render(<App/>);
 //   const element = app.getByTitle('dark-mode-btn');
