@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
+import axios from 'axios';
+import {PlayerCard, PlayerList} from './components/player-list.component';
 import './App.css';
 
-function App() {
+class  App extends React.Component {
+
+  //creating a class component and setting initial state to empty object of the players that we receive from our API
+  
+
+
+  constructor(){
+    super();
+    this.state= {
+      players: []
+
+    }
+  }
+  componentDidMount(){
+    axios
+      .get('http://localhost:5000/api/players')
+      .then(res => {
+        console.log(res.data)
+        this.setState({
+          players: res.data
+        })
+      })
+      .catch(err => console.log(err))
+  }
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Women's World Cup!</h1>
+      <PlayerList players= {this.state.players}/>
     </div>
   );
 }
-
+}
 export default App;
